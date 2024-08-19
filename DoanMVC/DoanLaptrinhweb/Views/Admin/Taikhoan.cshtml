@@ -1,0 +1,82 @@
+﻿@using DoanLaptrinhweb.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<DoanLaptrinhweb.Models.KhachHang>
+
+@{
+    ViewBag.Title = "QUẢN LÍ TÀI KHOẢN NGƯỜI DÙNG";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>QUẢN LÍ TÀI KHOẢN NGƯỜI DÙNG</h2>
+
+<p>
+    @Html.ActionLink("Thêm khách hàng", "ThemmoiKH")
+</p>
+<table class="table">
+    <tr>
+        <th style="width:200px">
+            HỌ TÊN
+        </th>
+        <th style="width:200px">
+            TÀI KHOẢN
+        </th>
+        <th style="width:200px">
+            MẬT KHẨU
+        </th>
+        <th style="width:200px">
+            EMAIL
+        </th>
+        <th style="width:200px">
+            ĐỊA CHỈ
+        </th>
+        <th style="width:200px">
+            SỐ ĐIỆN THOẠI
+        </th>
+        <th style="width:200px">
+            NGÀY SINH
+        </th>
+        <th style="width:200px"></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoTen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaiKhoan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MatKhau)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiachiKH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DienThoaiKH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgaySinh)
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "SuaKH", new { id = item.MaKH }) |
+                @Html.ActionLink("Chi tiết", "ChitietKH", new { id = item.MaKH }) |
+                @Html.ActionLink("Xóa", "XoaKH", new { id = item.MaKH })
+            </td>
+        </tr>
+    }
+
+</table>
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount;
+<div class="MenuTrang">
+    @Html.PagedListPager(Model, page => Url.Action("Taikhoan", new { page = page }))
+</div>
+<style>
+    .MenuTrang li {
+        display: inline;
+    }
+</style>

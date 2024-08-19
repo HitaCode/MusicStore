@@ -1,0 +1,79 @@
+﻿@using DoanLaptrinhweb.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<DoanLaptrinhweb.Models.Nhac>
+
+@{
+    ViewBag.Title = "QUẢN LÍ SẢN PHẨM";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h2>QUẢN LÍ THÔNG TIN NHẠC</h2>
+<p>
+    @Html.ActionLink("THÊM NHẠC", "ThemmoiNhac")
+</p>
+<table class="table" border="1">
+    <tr>
+        <th style="width:200px">
+           Tên nhạc
+        </th>
+        <th style="width:200px">
+            Tên Ca Sĩ
+        </th>
+        <th style="width:200px">
+            Giá
+        </th>
+        <th style="width:200px">
+            Ảnh bìa
+        </th>
+        <th style="width:200px">
+            Ngày cập nhật
+        </th>
+        <th style="width:200px">
+            Số lượng tồn
+        </th>
+        <th style="width:200px">
+            Dạng nhạc
+        </th>
+        <th style="width:200px"></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenNhac)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenCasi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaBan)
+        </td>
+        <td>
+            <img src="@Url.Content("~/Hinhsanpham/"+ item.AnhBia)" width="100" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayCapNhat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuongTon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dangnhac.TenDangnhac)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Suanhac", new { id=item.MaNhac }) |
+            @Html.ActionLink("Chi tiết", "Chitietnhac", new { id=item.MaNhac }) |
+            @Html.ActionLink("Xóa", "Xoanhac", new { id=item.MaNhac })
+        </td>
+    </tr>
+}
+
+</table>
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount;
+<div class="MenuTrang">
+    @Html.PagedListPager(Model, page => Url.Action("Nhac", new { page = page}))
+</div>
+<style>
+    .MenuTrang li {
+        display: inline;
+    }
+</style>

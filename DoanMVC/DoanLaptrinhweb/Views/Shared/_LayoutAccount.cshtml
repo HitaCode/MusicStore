@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <title>Hãng Băng đĩa lỗi thời</title>
+    <link rel="icon" type="~/Images/x-icon" href="~/Images/Favicon.ico">
+</head>
+<body>
+    <div>
+        <header>
+            <img src="~/Images/header.png" alt="'">
+        </header>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><img src="~/Images/navbar1.png" alt=""></li>
+                    <li><a href="~/MusicStore/Index"><i class="fa-solid fa-house-chimney"></i></a></li>
+                    <li><input type="text" placeholder="Tìm kiếm âm nhạc..."><i class="fa-solid fa-magnifying-glass"></i></li>
+                    <li><a href="">Hỗ trợ khách hàng <br> <i class="fa-solid fa-phone"></i> <b>0942919707</b></a></li>
+                    <li id="account-form"><a href="#"><i class="fas fa-user-circle mr-3 align-self-center"></i> <b>Tài khoản</b> <br><u>đăng nhập</u>/<u>đăng kí</u> <i class="fa-solid fa-pen"></i></a></li>
+                    <li><div class="cart-icon"><a href="@Url.Action("Giohang","Giohang")"><button><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</button></a></div></li>
+                    <div class="account-form">
+                        <div class="account-form-content">
+                            <h2>Tài khoản <span id="account-close">x Đóng</span></h2>
+                            <form action="">
+                                <p>Tài khoản</p>
+                                <br><a href="~/Nguoidung/Dangnhap">Đăng nhập</a>
+                                <br><a href="~/Nguoidung/Dangky">Đăng kí</a>
+                                <br><a href="~/Admin/Login">Đăng Nhập Admin</a>
+                            </form>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+        @Html.Action("Dangnhac", "MusicStore")
+        <section class="Slide">
+            <div class="container">
+                <div class="Slide-content">
+                    <div class="Slide-content-left">
+                        <div class="Slide-content-left-top-container">
+                            <div class="Slide-content-left-top">
+                                <a href=""><img src="~/Images/Slideleft1.png" alt=""></a>
+                                <a href=""><img src="~/Images/Slideleft2.png" alt=""></a>
+                                <a href=""><img src="~/Images/Slideleft3.png" alt=""></a>
+                                <a href=""><img src="~/Images/Slideleft4.jpg" alt=""></a>
+                                <a href=""><img src="~/Images/Slideleft5.png" alt=""></a>
+                            </div>
+                            <div class="Slide-content-left-top-btn">
+                                <i class="fa-solid fa-chevron-left"></i>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="Slide-content-left-bottom">
+                            <li class="active">Nghệ sĩ tiêu biểu</li>
+                            <li>Phát hành ấn bản</li>
+                            <li>Album tiêu biểu</li>
+                            <li>Nghệ sĩ quốc tế</li>
+                            <li>Kỉ niệm âm nhạc</li>
+                        </div>
+                    </div>
+                    <div class="Slide-content-right">
+                        <li><a href=""><img src="~/Images/Slideright1.jpg" alt=""></a></li>
+                        <li><a href=""><img src="~/Images/Slideright2.jpg" alt=""></a></li>
+                        <li><a href=""><img src="~/Images/Slideright3.png" alt=""></a></li>
+                        <li><a href=""><img src="~/Images/Slideright4.jpg" alt=""></a></li>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="banner">
+            <div class="container">
+                <img src="~/Images/Banner1.png" alt="">
+            </div>
+            
+                @RenderBody()
+           
+            
+        </section>
+        <footer class="site-footer">
+            <div class="wrapper">
+                <div class="site-footer-main">
+                    <div class="site-footer-main-concept">
+                        <div class="site-footer-main-concept-main">
+                            <img src="~/Images/Header.png" alt="">
+                        </div>
+                        <div class="site-footer-main-concept-main">
+                            <h4>THÔNG TIN</h4>
+                            <ul>
+                                <li><a href="">Giới thiệu</a></li>
+                                <li><a href="">Liên hệ</a></li>
+                                <li><a href="">Thông tin ngân hàng</a></li>
+                                <li><a href="">Câu hỏi thường gặp</a></li>
+                            </ul>
+                        </div>
+                        <div class="site-footer-main-concept-main">
+                            <h4>SẢN PHẨM</h4>
+                            <ul>
+                                <li><a href="">Ấn bản</a></li>
+                                <li><a href="">CD/DVD</a></li>
+                                <li><a href="">Đĩa than</a></li>
+                                <li><a href="">Băng Cassette</a></li>
+                            </ul>
+                        </div>
+                        <div class="site-footer-main-concept-main">
+                            <h4>CONTACT</h4>
+                            <ul>
+                                <li><a href="https://www.facebook.com/ppiiboom/"><i class="fa-brands fa-facebook"></i></a> </li>
+                                <li><a href="https://www.youtube.com/channel/UCdebnrZqmCWWOpcgfirafkQ"><i class="fa-brands fa-youtube"></i></a></li>
+                                <li><a href="https://twitter.com/HeroPotatoo"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/trietbebong_22/"><i class="fa-brands fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="site-footer-main-concept-main">
+                            <img src="~/Images/color1.png" alt="">
+                        </div>
+                        <div class="site-footer-main-concept-maincolor">
+                            <img src="~/Images/color1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <footer class="site-footer-two">
+            <div class="wrapper">
+                <div class="site-footer-two-main">
+                    <div class="site-footer-two-main-concept">
+                        <div class="site-footer-two-main-concept-main">
+                            © 2021-2022 Công ty TNHH HÃNG BĂNG ĐĨA LỖI THỜI - behind the times Co., Ltd. All rights reserved.
+                        </div>
+                        <div class="site-footer-two-main-concept-main">
+                            <a href=""><img src="~/Images/iconbannerend.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="~/Scripts/script.js"></script>
+    </div>
+</body>
+</html>

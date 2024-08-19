@@ -1,0 +1,66 @@
+﻿@model DoanLaptrinhweb.Models.DonDatHang
+
+@{
+    ViewBag.Title = "Chi tiết đơn hàng";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Chi tiết đơn hàng</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Số Đơn hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoDH)
+        </dd>
+
+        <dt>
+            Mã khách hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KhachHang.HoTen)
+        </dd>
+
+        <dt>
+            Ngày đặt hàng
+        </dt>
+
+        <dd>
+            @String.Format("{0:dd/MM/yyyy}", Model.NgayDH)
+        </dd>
+
+        <dt>
+            Ngày giao
+        </dt>
+
+        <dd>
+            @String.Format("{0:dd/MM/yyyy}", Model.NgayGiao)
+        </dd>
+
+        <dt>
+            Đã thanh toán
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DaThanhToan)
+        </dd>
+
+        <dt>
+            Tình trạng giao hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TinhTrangGiaoHang)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Điều chỉnh", "SuaDH", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("TRỞ VỀ", "Donhang")
+</p>

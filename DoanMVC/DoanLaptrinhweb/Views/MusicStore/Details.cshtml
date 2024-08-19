@@ -1,0 +1,29 @@
+﻿    
+@{
+    ViewBag.Title = "Thông tin sản phẩm";
+    Layout = "~/Views/Shared/_LayoutDetails.cshtml";
+}
+<div class"details">
+   
+<link href="https://fonts.googleapis.com/css?family=Bentham|Playfair+Display|Raleway:400,500|Suranna|Trocchi" rel="stylesheet">
+    <div class="details-wrapper">
+        <div class="details-product-img">
+            <img src="~/Hinhsanpham/@Model.AnhBia" height="420" width="327">
+        </div>
+        <div class="details-product-info">
+            <div class="details-product-text">
+                <h1>@Model.TenNhac</h1>
+                <h2>@Model.TenCasi</h2>
+                <p> Cảm nhận sự thần kì của âm nhạc </p>
+            </div>
+            <div class="details-product-price-btn">
+                <p><span>@Model.GiaBan</span><sup><u>đ</u></sup></p>
+                <div id="Datmua">
+                    <a href="@Url.Action("ThemGiohang", "GioHang", new { @iMaNhac= @Model.MaNhac, @strURL=Request.Url.ToString() })">
+                        <button type="button">buy now</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

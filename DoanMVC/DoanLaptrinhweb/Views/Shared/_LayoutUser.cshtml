@@ -1,0 +1,390 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <title>Hãng Băng đĩa lỗi thời</title>
+    <link rel="icon" type="~/Images/x-icon" href="~/Images/Favicon.ico">
+</head>
+<body>
+    <div>
+        <header>
+            <img src="~/Images/header.png" alt="'">
+        </header>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><img src="~/Images/navbar1.png" alt=""></li>
+                    <li><a href="~/MusicStore/Index"><i class="fa-solid fa-house-chimney"></i></a></li>
+                    <li><input type="text" placeholder="Tìm kiếm âm nhạc..."><i class="fa-solid fa-magnifying-glass"></i></li>
+                    <li><a href="">Hỗ trợ khách hàng <br> <i class="fa-solid fa-phone"></i> <b>0942919707</b></a></li>
+                    <li id="account-form"><a href="#"><i class="fas fa-user-circle mr-3 align-self-center"></i> <b>Tài khoản</b> <br><u>đăng nhập</u>/<u>đăng kí</u> <i class="fa-solid fa-pen"></i></a></li>
+                    <li><div class="cart-icon"><a href="@Url.Action("Giohang","Giohang")"><button><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</button></a></div></li>
+                    <div class="account-form">
+                        <div class="account-form-content">
+                            <h2>Tài khoản <span id="account-close">x Đóng</span></h2>
+                            <form action="">
+                                <p>Tài khoản</p>
+                                <br><a href="~/Nguoidung/Dangnhap">Đăng nhập</a>
+                                <br><a href="~/Nguoidung/Dangky">Đăng kí</a>
+                                <br><a href="~/Admin/Login">Đăng Nhập Admin</a>
+                            </form>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+        @Html.Action("Dangnhac", "MusicStore")
+        <section class="Slide">
+            <div class="container">
+                <div class="Slide-content">
+                    <div class="Slide-content-left">
+                        <div class="Slide-content-left-top-container">
+                            <div class="Slide-content-left-top">
+                                <a href=""><img src="~/Images/Slideleft1.png" alt=""></a>
+                                <a href=""><img src="~/Images/Slideleft2.png" alt=""></a>
+                                <a href=""><img src="~/Images/Slideleft3.png" alt=""></a>
+                                <a href=""><img src="~/Images/Slideleft4.jpg" alt=""></a>
+                                <a href=""><img src="~/Images/Slideleft5.png" alt=""></a>
+                            </div>
+                            <div class="Slide-content-left-top-btn">
+                                <i class="fa-solid fa-chevron-left"></i>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="Slide-content-left-bottom">
+                            <li class="active">Nghệ sĩ tiêu biểu</li>
+                            <li>Phát hành ấn bản</li>
+                            <li>Album tiêu biểu</li>
+                            <li>Nghệ sĩ quốc tế</li>
+                            <li>Kỉ niệm âm nhạc</li>
+                        </div>
+                    </div>
+                    <div class="Slide-content-right">
+                        <li><a href=""><img src="~/Images/Slideright1.jpg" alt=""></a></li>
+                        <li><a href=""><img src="~/Images/Slideright2.jpg" alt=""></a></li>
+                        <li><a href=""><img src="~/Images/Slideright3.png" alt=""></a></li>
+                        <li><a href=""><img src="~/Images/Slideright4.jpg" alt=""></a></li>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="banner">
+            <div class="container">
+                <img src="~/Images/Banner1.png" alt="">
+            </div>
+        </section>
+        <section class="Slide-product">
+            <div class="container">
+                <div class="Slide-product-content">
+                    <div class="Slide-product-content-title">
+                        <h2><i class="fa-solid fa-square-full"></i> HÃNG BĂNG ĐĨA LỖI THỜI PHÁT HÀNH</h2>
+                    </div>
+                    <div class="Slide-product-content-container">
+                        <div class="Slide-product-content-items-content">
+                            <div class="Slide-product-content-items">
+                                <div class="Slide-product-content-item">
+                                    <img src="~/Images/product1.png" alt="">
+                                    <div class="Slide-product-content-item-text">
+                                        <a href="">
+                                            HOÀNG THUỲ LINH - LINK - THE 4TH STUDIO ALBUM (BOXSET) - ĐĨA CD<a>
+                                                <li>500,000<sup><u>đ</u></sup></li>
+                                    </div>
+                                    <button class="Slide-product-content-item-addcart">THÊM VÀO GIỎ</button>
+                                </div>
+                                <div class="Slide-product-content-item">
+                                    <img src="~/Images/product2.jfif" alt="">
+                                    <div class="Slide-product-content-item-text">
+                                        <a href="">
+                                            KATE BUSH - THE DREAMING ALBUM (BLACK VINYL) - ĐĨA THAN<a>
+                                                <li>520,000<sup><u>đ</u></sup></li>
+                                    </div>
+                                    <button class="Slide-product-content-item-addcart">THÊM VÀO GIỎ</button>
+                                </div>
+                                <div class="Slide-product-content-item">
+                                    <img src="~/Images/product3.jpg" alt="">
+                                    <div class="Slide-product-content-item-text">
+                                        <a href="">
+                                            AIR SUPPLY - GREATEST HITS ALBUM - CASSETTE TAPE<a>
+                                                <li>320,000<sup><u>đ</u></sup></li>
+                                    </div>
+                                    <button class="Slide-product-content-item-addcart">THÊM VÀO GIỎ</button>
+                                </div>
+                                <div class="Slide-product-content-item">
+                                    <img src="~/Images/product4.png" alt="">
+                                    <div class="Slide-product-content-item-text">
+                                        <a href="">
+                                            BILLIE EILISH - HAPPIER THAN EVER - ĐĨA CD (PHIÊN BẢN GIỚI HẠN)<a>
+                                                <li>390,000<sup><u>đ</u></sup></li>
+                                    </div>
+                                    <button class="Slide-product-content-item-addcart">THÊM VÀO GIỎ</button>
+                                </div>
+                                <div class="Slide-product-content-item">
+                                    <img src="~/Images/product5.png" alt="">
+                                    <div class="Slide-product-content-item-text">
+                                        <a href="">
+                                            BEACH HOUSE - ONCE TWICE MELODY (DOUBLE CASSETTE) - BĂNG CASSETTE<a>
+                                                <li>480,000<sup><u>đ</u></sup></li>
+                                    </div>
+                                    <button class="Slide-product-content-item-addcart">THÊM VÀO GIỎ</button>
+                                </div>
+                            </div>
+                            <div class="Slide-product-content-items">
+                                <div class="Slide-product-content-item">
+                                    <img src="~/Images/product6.png" alt="">
+                                    <div class="Slide-product-content-item-text">
+                                        <a href="">
+                                            TAYLOR SWIFT - MIDNIGHT (PREORDER) - CASSETTE - ĐĨA CD - VINYL (3 PHIÊN BẢN)<a>
+                                                <li>500,000<sup><u>đ</u></sup> - 400,000<sup><u>đ</u></sup> - 1,000,000<sup><u>đ</u></sup></li>
+                                    </div>
+                                    <button class="Slide-product-content-item-addcart">THÊM VÀO GIỎ</button>
+                                </div>
+                                <div class="Slide-product-content-item">
+                                    <img src="~/Images/product7.png" alt="">
+                                    <div class="Slide-product-content-item-text">
+                                        <a href="">
+                                            DEMI LOVATO - TELL ME YOU LOVE ME (STANDARD) - ĐĨA CD<a>
+                                                <li>240,000<sup><u>đ</u></sup></li>
+                                    </div>
+                                    <button class="Slide-product-content-item-addcart">THÊM VÀO GIỎ</button>
+                                </div>
+                                <div class="Slide-product-content-item">
+                                    <img src="~/Images/product8.png" alt="">
+                                    <div class="Slide-product-content-item-text">
+                                        <a href="">
+                                            THE WEEKND - DAWN FM (VINYL 2LP) - ĐĨA THAN<a>
+                                                <li>1,050,000<sup><u>đ</u></sup></li>
+                                    </div>
+                                    <button class="Slide-product-content-item-addcart">THÊM VÀO GIỎ</button>
+                                </div>
+                                <div class="Slide-product-content-item">
+                                    <img src="~/Images/product9.png" alt="">
+                                    <div class="Slide-product-content-item-text">
+                                        <a href="">
+                                            CÁ HỒI HOANG - NGÀY ẤY VÀ SAU NÀY (∨∧) (CASSETTE TAPE) - BĂNG CASSETTE<a>
+                                                <li>350,000<sup><u>đ</u></sup></li>
+                                    </div>
+                                    <button class="Slide-product-content-item-addcart">THÊM VÀO GIỎ</button>
+                                </div>
+                                <div class="Slide-product-content-item">
+                                    <img src="~/Images/product10.png" alt="">
+                                    <div class="Slide-product-content-item-text">
+                                        <a href="">
+                                            LANA DEL REY - CHEMTRAILS OVER THE COUNTRY CLUB (TARGET EXCLUSIVE) - ĐĨA CD<a>
+                                                <li>400,000<sup><u>đ</u></sup></li>
+                                    </div>
+                                    <button class="Slide-product-content-item-addcart">THÊM VÀO GIỎ</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Slide-product-content-btn">
+                            <i class="fa-solid fa-chevron-left fa-chevron-left-2"></i>
+                            <i class="fa-solid fa-chevron-right fa-chevron-right-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="banner2">
+            <div class="container">
+                <img src="~/Images/banner2.png" alt="">
+            </div>
+        </section>
+        @RenderBody()
+        <section class="trending-product">
+            <div class="container">
+                <div class="trending-product-content">
+                    <div class="trending-product-content-title">
+                        <h2><i class="fa-solid fa-square-full"></i> TRENDING</h2>
+                    </div>
+                    <div class="trending-product-content-product">
+                        <div class="trending-product-content-product-item">
+                            <img src="~/Images/product21.jpg" alt="">
+                            <div class="trending-product-content-product-item-text">
+                                <a href="">
+                                    KATE BUSH - HOUNDS OF LOVE (LIMITED EDITION) - BĂNG CASSETTE<a>
+                                        <li>2,000,000<sup><u>đ</u></sup></li>
+                            </div>
+                            <button class="trending-product-content-product-item-addcart">THÊM VÀO GIỎ</button>
+                        </div>
+                        <div class="trending-product-content-product-item">
+                            <img src="~/Images/product22.png" alt="">
+                            <div class="trending-product-content-product-item-text">
+                                <a href="">
+                                    LÊ CÁT TRỌNG LÝ - LÊ CÁT TRỌNG LÝ (DELUXE EDITION - PURPLE TINT) - BĂNG CASSETTE<a>
+                                        <li>300,000<sup><u>đ</u></sup></li>
+                            </div>
+                            <button class="trending-product-content-product-item-addcart">THÊM VÀO GIỎ</button>
+                        </div>
+                        <div class="trending-product-content-product-item">
+                            <img src="~/Images/product23.png" alt="">
+                            <div class="trending-product-content-product-item-text">
+                                <a href="">
+                                    BILLIE EILISH - HAPPIER THAN EVER - BĂNG CASSETTE<a>
+                                        <li>390,000<sup><u>đ</u></sup></li>
+                            </div>
+                            <button class="trending-product-content-product-item-addcart">THÊM VÀO GIỎ</button>
+                        </div>
+                        <div class="trending-product-content-product-item">
+                            <img src="~/Images/product24.png" alt="">
+                            <div class="trending-product-content-product-item-text">
+                                <a href="">
+                                    TAYLOR SWIFT - MIDNIGHTS (MOONSTONE BLUE EDITION VINYL) - ĐĨA THAN<a>
+                                        <li>980,000<sup><u>đ</u></sup></li>
+                            </div>
+                            <button class="trending-product-content-product-item-addcart">THÊM VÀO GIỎ</button>
+                        </div>
+                        <div class="trending-product-content-product-item">
+                            <img src="~/Images/product25.png" alt="">
+                            <div class="trending-product-content-product-item-text">
+                                <a href="">
+                                    TAYLOR SWIFT - ME! (LIMITED CD SINGLE) - ĐĨA ĐƠN CD<a>
+                                        <li>800,000<sup><u>đ</u></sup></li>
+                            </div>
+                            <button class="trending-product-content-product-item-addcart">THÊM VÀO GIỎ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="banner3">
+            <div class="container">
+                <div class="banner3-product">
+                    <div class="banner3-product-item">
+                        <a href=""><img src="~/Images/banner3.png" alt=""></a>
+                    </div>
+                    <div class="banner3-product-item">
+                        <a href=""><img src="~/Images/banner4.png" alt=""></a>
+                    </div>
+                    <div class="banner3-product-item">
+                        <a href=""><img src="~/Images/banner5.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="chosen-product">
+            <div class="container">
+                <div class="chosen-product-content">
+                    <div class="chosen-product-content-title">
+                        <h2><i class="fa-solid fa-square-full"></i> HÃNG CHỌN BẠN NGHE</h2>
+                    </div>
+                    <div class="chosen-product-content-product">
+                        <div class="chosen-product-content-product-item">
+                            <img src="~/Images/product26.png" alt="">
+                            <div class="chosen-product-content-product-item-text">
+                                <a href="">
+                                    TAYLOR SWIFT - FOLKLORE #1 THE "IN THE TREES" EDITION DELUXE VINYL - ĐĨA THAN<a>
+                                        <li>850,000<sup><u>đ</u></sup></li>
+                            </div>
+                            <button class="chosen-product-content-product-item-addcart">THÊM VÀO GIỎ</button>
+                        </div>
+                        <div class="chosen-product-content-product-item">
+                            <img src="~/Images/product27.png" alt="">
+                            <div class="chosen-product-content-product-item-text">
+                                <a href="">
+                                    CHVRCHES - SCREEN VIOLENCE (INDIE-RETAIL EXCLUSIVE) (RED/CLEAR VINYL LP) - ĐĨA THAN<a>
+                                        <li>850,000<sup><u>đ</u></sup></li>
+                            </div>
+                            <button class="chosen-product-content-product-item-addcart">THÊM VÀO GIỎ</button>
+                        </div>
+                        <div class="chosen-product-content-product-item">
+                            <img src="~/Images/product28.jpg" alt="">
+                            <div class="chosen-product-content-product-item-text">
+                                <a href="">
+                                    KATE BUSH - THE WHOLE STORY - BĂNG CASSETTE<a>
+                                        <li>450,000<sup><u>đ</u></sup></li>
+                            </div>
+                            <button class="chosen-product-content-product-item-addcart">THÊM VÀO GIỎ</button>
+                        </div>
+                        <div class="chosen-product-content-product-item">
+                            <img src="~/Images/product29.jpg" alt="">
+                            <div class="chosen-product-content-product-item-text">
+                                <a href="">
+                                    AIR SUPPLY - LOST IN LOVE - BĂNG CASSETTE<a>
+                                        <li>850,000<sup><u>đ</u></sup></li>
+                            </div>
+                            <button class="chosen-product-content-product-item-addcart">THÊM VÀO GIỎ</button>
+                        </div>
+                        <div class="chosen-product-content-product-item">
+                            <img src="~/Images/product30.jpg" alt="">
+                            <div class="chosen-product-content-product-item-text">
+                                <a href="">
+                                    NETFLIX - STRANGER THINGS: SOUNDTRACK FORM THE NETFLIX SERIES, SEASON 4 - BĂNG CASSETTE<a>
+                                        <li>850,000<sup><u>đ</u></sup></li>
+                            </div>
+                            <button class="chosen-product-content-product-item-addcart">THÊM VÀO GIỎ</button>
+                        </div>
+                    </div>
+        </section>
+        <footer class="site-footer">
+            <div class="wrapper">
+                <div class="site-footer-main">
+                    <div class="site-footer-main-concept">
+                        <div class="site-footer-main-concept-main">
+                            <img src="~/Images/Header.png" alt="">
+                        </div>
+                        <div class="site-footer-main-concept-main">
+                            <h4>THÔNG TIN</h4>
+                            <ul>
+                                <li><a href="">Giới thiệu</a></li>
+                                <li><a href="">Liên hệ</a></li>
+                                <li><a href="">Thông tin ngân hàng</a></li>
+                                <li><a href="">Câu hỏi thường gặp</a></li>
+                            </ul>
+                        </div>
+                        <div class="site-footer-main-concept-main">
+                            <h4>SẢN PHẨM</h4>
+                            <ul>
+                                <li><a href="">Ấn bản</a></li>
+                                <li><a href="">CD/DVD</a></li>
+                                <li><a href="">Đĩa than</a></li>
+                                <li><a href="">Băng Cassette</a></li>
+                            </ul>
+                        </div>
+                        <div class="site-footer-main-concept-main">
+                            <h4>CONTACT</h4>
+                            <ul>
+                                <li><a href="https://www.facebook.com/ppiiboom/"><i class="fa-brands fa-facebook"></i></a> </li>
+                                <li><a href="https://www.youtube.com/channel/UCdebnrZqmCWWOpcgfirafkQ"><i class="fa-brands fa-youtube"></i></a></li>
+                                <li><a href="https://twitter.com/HeroPotatoo"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/trietbebong_22/"><i class="fa-brands fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="site-footer-main-concept-main">
+                            <img src="~/Images/color1.png" alt="">
+                        </div>
+                        <div class="site-footer-main-concept-maincolor">
+                            <img src="~/Images/color1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <footer class="site-footer-two">
+            <div class="wrapper">
+                <div class="site-footer-two-main">
+                    <div class="site-footer-two-main-concept">
+                        <div class="site-footer-two-main-concept-main">
+                            © 2021-2022 Công ty TNHH HÃNG BĂNG ĐĨA LỖI THỜI - behind the times Co., Ltd. All rights reserved.
+                        </div>
+                        <div class="site-footer-two-main-concept-main">
+                            <a href=""><img src="~/Images/iconbannerend.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="~/Scripts/script.js"></script>
+
+       
+    </div>
+</body>
+</html>

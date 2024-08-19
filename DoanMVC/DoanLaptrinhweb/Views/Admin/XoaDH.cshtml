@@ -1,0 +1,72 @@
+﻿@model DoanLaptrinhweb.Models.DonDatHang
+
+@{
+    ViewBag.Title = "Xóa đơn hàng";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Xóa đơn hàng</h2>
+
+<h3>Bạn có chắc chắc xóa đơn hàng này?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Số đơn hàng:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoDH)
+        </dd>
+
+        <dt>
+            Mã khách hàng:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KhachHang.HoTen)
+        </dd>
+
+        <dt>
+            Ngày đặt hàng:
+        </dt>
+
+        <dd>
+            @String.Format("{0:dd/MM/yyyy}", Model.NgayDH)
+        </dd>
+
+        <dt>
+            Ngày giao:
+        </dt>
+
+        <dd>
+            @String.Format("{0:dd/MM/yyyy}", Model.NgayGiao)
+        </dd>
+
+        <dt>
+            Đã thanh toán:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DaThanhToan)
+        </dd>
+
+        <dt>
+            Tình trạng giao hàng:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TinhTrangGiaoHang)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Trở về", "Donhang")
+        </div>
+    }
+</div>

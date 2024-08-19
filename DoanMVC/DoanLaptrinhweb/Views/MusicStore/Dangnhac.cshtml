@@ -1,0 +1,17 @@
+﻿@model IEnumerable<DoanLaptrinhweb.Models.Dangnhac>
+@foreach (var item in Model)
+            {
+               <section class="menu-bar">
+                   <div class="container">
+                       <div class="menu-bar-content">
+                           <ul>
+                               <li>
+                                   <a href="@Url.Action("SPTheodangnhac", "MusicStore", new { id = item.MaDangnhac})">
+                                       @item.TenDangnhac
+                                   </a>
+                               </li>
+                           </ul>
+                       </div>
+                       </section>
+                       }
+                  

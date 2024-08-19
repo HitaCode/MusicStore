@@ -1,0 +1,67 @@
+﻿@model DoanLaptrinhweb.Models.Nhac
+
+@{
+    ViewBag.Title = "XÓA SẢN PHẨM";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>XÁC NHẬN THÔNG TIN NHẠC CẦN XÓA</h2>
+
+<h3>Bạn quyết định xóa sản phẩm này?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên nhạc:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TenNhac)
+        </dd>
+        <dt>
+            Tên ca sĩ:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TenCasi)
+        </dd>
+        <dt>
+            Giá bán:
+        </dt>
+        <dd>
+            @String.Format("{0:0,0}", Model.GiaBan) VNĐ
+        </dd>
+        <dt>
+            Ảnh bìa:
+        </dt>
+        <dd>
+            <img src="@Url.Content("~/Hinhsanpham/"+ Model.AnhBia)" width="120" />
+        </dd>
+        <dt>
+            NGày cập nhật:
+        </dt>
+        <dd>
+            @String.Format("{0:dd/MM/yyyy}", Model.NgayCapNhat)
+        </dd>
+        <dt>
+            Số lượng tồn:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongTon)
+        </dd>
+        <dt>
+            Dạng nhạc
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Dangnhac.TenDangnhac)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("TRỞ VỀ", "Nhac")
+        </div>
+    }
+</div>

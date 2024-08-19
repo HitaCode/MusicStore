@@ -1,0 +1,36 @@
+﻿@model IEnumerable<DoanLaptrinhweb.Models.Nhac>
+
+@{
+    ViewBag.Title = "Hãng đĩa lỗi thời";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<section class="product-gallery">
+    <div class="container">
+        <div class="product-gallery-content">
+            <div class="product-gallery-content-title">
+                <h2><i class="fa-solid fa-square-full"></i> NEW ARRIVALS / SẢN PHẨM MỚI</h2>
+            </div>
+            <div class="product-gallery-content-product">
+                @foreach (var Nhac in Model)
+                {
+                    <div class="product-gallery-content-product-item">
+                        <a href="@Url.Action("Details", "MusicStore", new { id = Nhac.MaNhac})">
+                            <img alt="@Nhac.TenNhac" src="~/Hinhsanpham/@Nhac.AnhBia" width="200" />
+                        </a>
+                        <div class="product-gallery-content-product-item-text">
+                            <a href="">@Nhac.TenCasi - @Nhac.TenNhac <br /> <br /> @Nhac.GiaBan VNĐ <br /> </a>
+                        </div>
+                        <div id="Datmua">
+                            <a href="@Url.Action("ThemGiohang", "GioHang", new { @iMaNhac= @Nhac.MaNhac, @strURL=Request.Url.ToString() })">
+                                <button class="product-gallery-content-product-item-addcart">THÊM VÀO GIỎ</button>
+                            </a>
+                        </div>
+                    </div>
+                        }
+                    </div>
+        </div>
+    </div>
+</section>
+
+
+
